@@ -1,4 +1,4 @@
-local next, ipairs = next, ipairs
+local next, ipairs, trade, unknown = next, ipairs, -1, -2
 local ducatTable = {
 	["Akbronco Prime"] = {
 		Blueprint = 10,
@@ -691,8 +691,78 @@ local masterTable = {
 			}
 		}
 	},
-	Derelict = {},
-	Archwing = {}
+	Derelict = {
+		Defense = {
+			["/"] = {
+				C = {
+					{probability = unknown, rarity = unknown, type = "item", set = "Dual Kamas Prime", part = "Handle"},
+					{probability = unknown, rarity = "Uncommon", type = "item", set = "Trinity Prime", part = "Blueprint"},
+					{probability = unknown, rarity = "Uncommon", type = "item", set = "Soma Prime", part = "Stock"}
+				}
+			}
+		},
+		Survival = {
+			["/"] = {
+				C = {
+					{probability = unknown, rarity = unknown, type = "item", set = "Nova Prime", part = "Systems"},
+					{probability = unknown, rarity = "Common", type = "item", set = "Burston Prime", part = "Barrel"},
+					{probability = unknown, rarity = "Uncommon", type = "misc", set = "Forma Blueprint", amount = 1}
+				}
+			}
+		}
+	},
+	Archwing = {},
+	["Prime Vault"] = {
+		["N /"] = {
+			["A"] = {
+				Trade = {
+					{probability = trade, rarity = trade, type = "item", set = "Mag Prime", part = "Systems"},
+					{probability = trade, rarity = trade, type = "item", set = "Mag Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Mag Prime", part = "Helmet"},
+					{probability = trade, rarity = trade, type = "item", set = "Mag Prime", part = "Chassis"},
+					{probability = trade, rarity = trade, type = "item", set = "Ember Prime", part = "Systems"},
+					{probability = trade, rarity = trade, type = "item", set = "Ember Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Ember Prime", part = "Helmet"},
+					{probability = trade, rarity = trade, type = "item", set = "Ember Prime", part = "Chassis"},
+					{probability = trade, rarity = trade, type = "item", set = "Rhino Prime", part = "Systems"},
+					{probability = trade, rarity = trade, type = "item", set = "Rhino Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Rhino Prime", part = "Helmet"},
+					{probability = trade, rarity = trade, type = "item", set = "Rhino Prime", part = "Chassis"},
+					{probability = trade, rarity = trade, type = "item", set = "Sicarus Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Sicarus Prime", part = "Barrel"},
+					{probability = trade, rarity = trade, type = "item", set = "Sicarus Prime", part = "Receiver"},
+					{probability = trade, rarity = trade, type = "item", set = "Boar Prime", part = "Stock"},
+					{probability = trade, rarity = trade, type = "item", set = "Boar Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Boar Prime", part = "Barrel"},
+					{probability = trade, rarity = trade, type = "item", set = "Boar Prime", part = "Receiver"},
+					{probability = trade, rarity = trade, type = "item", set = "Boltor Prime", part = "Stock"},
+					{probability = trade, rarity = trade, type = "item", set = "Boltor Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Boltor Prime", part = "Barrel"},
+					{probability = trade, rarity = trade, type = "item", set = "Boltor Prime", part = "Receiver"},
+					{probability = trade, rarity = trade, type = "item", set = "Latron Prime", part = "Stock"},
+					{probability = trade, rarity = trade, type = "item", set = "Latron Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Latron Prime", part = "Barrel"},
+					{probability = trade, rarity = trade, type = "item", set = "Latron Prime", part = "Receiver"},
+					{probability = trade, rarity = trade, type = "item", set = "Dakra Prime", part = "Blade"},
+					{probability = trade, rarity = trade, type = "item", set = "Dakra Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Dakra Prime", part = "Handle"},
+					{probability = trade, rarity = trade, type = "item", set = "Reaper Prime", part = "Blade"},
+					{probability = trade, rarity = trade, type = "item", set = "Reaper Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Reaper Prime", part = "Handle"},
+					{probability = trade, rarity = trade, type = "item", set = "Ankyros Prime", part = "Blade"},
+					{probability = trade, rarity = trade, type = "item", set = "Ankyros Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Ankyros Prime", part = "Gauntlet"},
+					{probability = trade, rarity = trade, type = "item", set = "Glaive Prime", part = "Blade"},
+					{probability = trade, rarity = trade, type = "item", set = "Glaive Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Glaive Prime", part = "Disc"},
+					{probability = trade, rarity = trade, type = "item", set = "Frost Prime", part = "Systems"},
+					{probability = trade, rarity = trade, type = "item", set = "Frost Prime", part = "Blueprint"},
+					{probability = trade, rarity = trade, type = "item", set = "Frost Prime", part = "Helmet"},
+					{probability = trade, rarity = trade, type = "item", set = "Frost Prime", part = "Chassis"}
+				}
+			}
+		}
+	}
 }
 
 local messages = {
