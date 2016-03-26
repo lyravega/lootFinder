@@ -1,0 +1,10 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\bin\Release\InfixCalculator.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\bin\Release\InfixCalculator.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\bin\Release\InfixCalculator.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\bin\Release\NLua.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Release\InfixCalculator.MainForm.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Release\InfixCalculator.Properties.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Release\InfixCalculator.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Release\InfixCalculator.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Release\InfixCalculator.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Release\InfixCalculator.csprojResolveAssemblyReference.cache

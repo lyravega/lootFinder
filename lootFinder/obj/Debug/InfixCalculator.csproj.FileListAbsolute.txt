@@ -1,0 +1,11 @@
+c:\users\administrator\documents\visual studio 2013\Projects\InfixCalculator\InfixCalculator\bin\Debug\InfixCalculator.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\bin\Debug\InfixCalculator.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\bin\Debug\InfixCalculator.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\bin\Debug\KopiLua.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\bin\Debug\NLua.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Debug\InfixCalculator.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Debug\InfixCalculator.MainForm.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Debug\InfixCalculator.Properties.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Debug\InfixCalculator.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Debug\InfixCalculator.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\InfixCalculator\InfixCalculator\obj\Debug\InfixCalculator.pdb
