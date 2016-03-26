@@ -150,6 +150,7 @@ local ducatTable = {
 	},
 	["Paris Prime"] = {
 		Blueprint = 10,
+		String = 10,
 		Grip = 30,
 		["Upper Limb"] = 10,
 		["Lower Limb"] = 10
