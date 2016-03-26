@@ -400,7 +400,7 @@ local masterTable = {
 			},
 			IV = {
 				A = {
-					{probability = 564, rarity = "Uncommon", type = "item", set = "Kavasa Prime", part = "Buckle"},
+					{probability = 564, rarity = "Uncommon", type = "item", set = "Kavasa Prime Collar", part = "Buckle"},
 					{probability = 564, rarity = "Uncommon", type = "misc", name = "Forma Blueprint", amount = 1},
 					{probability = 2581, rarity = "Common", type = "item", set = "Odonata Prime", part = "Harness"},
 					{probability = 2581, rarity = "Common", type = "item", set = "Hikou Prime", part = "Pouch"},
@@ -470,7 +470,7 @@ local masterTable = {
 			IV = {
 				A = {
 					{probability = 1667, rarity = "Uncommon", type = "item", set = "Bo Prime", part = "Handle"},
-					{probability = 1667, rarity = "Uncommon", type = "item", set = "Kavasa Prime", part = "Collar"},
+					{probability = 1667, rarity = "Uncommon", type = "item", set = "Kavasa Prime Collar", part = "Blueprint"},
 					{probability = 1667, rarity = "Uncommon", type = "item", set = "Vasto Prime", part = "Receiver"},
 					{probability = 1667, rarity = "Uncommon", type = "misc", name = "Forma Blueprint", amount = 1},
 					{probability = 1667, rarity = "Uncommon", type = "item", set = "Spira Prime", part = "Blueprint"},
@@ -482,10 +482,10 @@ local masterTable = {
 			I = {
 				A = {
 					{probability = 1128, rarity = "Uncommon", type = "item", set = "Scindo Prime", part = "Handle"},
-					{probability = 1128, rarity = "Uncommon", type = "item", set = "Odanata Prime", part = "Harness"},
+					{probability = 1128, rarity = "Uncommon", type = "item", set = "Odonata Prime", part = "Harness"},
 					{probability = 1936, rarity = "Common", type = "item", set = "Hikou Prime", part = "Stars"},
 					{probability = 1936, rarity = "Common", type = "item", set = "Nova Prime", part = "Blueprint"},
-					{probability = 1936, rarity = "Common", type = "item", set = "Odanata Prime", part = "Systems"},
+					{probability = 1936, rarity = "Common", type = "item", set = "Odonata Prime", part = "Systems"},
 					{probability = 1936, rarity = "Common", type = "item", set = "Vasto Prime", part = "Barrel"}
 				},
 				B = {
@@ -567,7 +567,7 @@ local masterTable = {
 					{probability = 1549, rarity = "Common", type = "item", set = "Carrier Prime", part = "Systems"},
 					{probability = 752, rarity = "Uncommon", type = "misc", name = "Forma Blueprint", amount = 1},
 					{probability = 1549, rarity = "Common", type = "item", set = "Loki Prime", part = "Chassis"},
-					{probability = 752, rarity = "Uncommon", type = "item", set = "Kavasa Prime", part = "Band"},
+					{probability = 752, rarity = "Uncommon", type = "item", set = "Kavasa Prime Collar", part = "Band"},
 					{probability = 1549, rarity = "Common", type = "item", set = "Ash Prime", part = "Helmet"},
 					{probability = 1549, rarity = "Common", type = "item", set = "Nova Prime", part = "Helmet"}
 				},
@@ -658,7 +658,7 @@ local masterTable = {
 				C = {
 					{probability = 1936, rarity = "Common", type = "item", set = "Bo Prime", part = "Blueprint"},
 					{probability = 1936, rarity = "Common", type = "item", set = "Carrier Prime", part = "Blueprint"},
-					{probability = 1936, rarity = "Uncommon", type = "item", set = "Vold Prime", part = "Chassis"},
+					{probability = 1936, rarity = "Uncommon", type = "item", set = "Volt Prime", part = "Chassis"},
 					{probability = 1936, rarity = "Uncommon", type = "item", set = "Ash Prime", part = "Systems"},
 					{probability = 1936, rarity = "Uncommon", type = "item", set = "Saryn Prime", part = "Chassis"},
 					{probability = 1936, rarity = "Common", type = "item", set = "Dual Kamas Prime", part = "Blueprint"},
@@ -692,7 +692,13 @@ local masterTable = {
 		}
 	},
 	Derelict = {},
-	Archwing = {},
+	Archwing = {}
+}
+
+local messages = {
+	noEntry = "Please enter a set name to search first.\nPart name can be left as blank or left as it is to search for all parts for that set.",
+	noResult_head = "Cannot find any set containing \"",
+	noResult_tail = "\" in its name"
 }
 
 local function findReward(rewardName, rewardPart)
@@ -713,6 +719,8 @@ local function findReward(rewardName, rewardPart)
 						if rewardInfo.type == rewardType then
 							if rewardInfo.set:lower():find(rewardName) then
 								if not rewardPart or rewardPart and rewardInfo.part:lower():find(rewardPart) then
+									--if not ducatTable[rewardInfo.set] then output = output..rewardInfo.set.." missing\n"
+									--else if not ducatTable[rewardInfo.set][rewardInfo.part] then output = output..rewardInfo.set.." "..rewardInfo.part.." missing\n" end end
 									output = output..missionLocation..", "..missionType.." "..towerLevel..", "..rotationName..": "..rewardInfo.set.." "..rewardInfo.part..", "..ducatTable[rewardInfo.set][rewardInfo.part].." Ducats\n"
 								end
 							end
@@ -724,7 +732,8 @@ local function findReward(rewardName, rewardPart)
 		end
 	end
 	
-	return output
+	if output ~= "" then return output
+	else return messages.noResult_head..rewardName..messages.noResult_tail end
 end
 
 local function findRewardHandler()
@@ -738,5 +747,9 @@ local function findRewardHandler()
 end
 
 function lyr_run(setText, partText)
-	return findReward(setText, partText)
+	partText = partText == "Part" and "" or partText
+	setText = setText == "Set" and "" or setText
+	
+	if setText ~= "" then return findReward(setText, partText) 
+	else return messages.noEntry end
 end

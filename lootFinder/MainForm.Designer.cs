@@ -47,7 +47,6 @@
             "Kavasa Prime",
             "Scindo Prime",
             "Wyrm Prime",
-            "Vold Prime",
             "Braton Prime",
             "Volt Prime",
             "Carrier Prime",
